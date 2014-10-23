@@ -7,5 +7,8 @@ class Pregunta
 		#inicializamos un array con 0 elementos para las respuestas
 	end
 
+	def preg
+		"Pregunta: #{@pr}"
+	end
 end
 
