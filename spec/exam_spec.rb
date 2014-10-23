@@ -32,7 +32,9 @@ describe Exam do
 	end
 
 	describe 'Lista enlazada' do
-	
+		before :all do
+			@lista = Lista
+		end	
 	end
 
 
