@@ -1,6 +1,6 @@
 class Pregunta
 
-	attr_reader :pr
+	attr_reader :pr, :re
 	def initialize (pregunta)
 		@pr = pregunta
 		@re = Array.new(0) 
@@ -10,5 +10,10 @@ class Pregunta
 	def preg
 		"Pregunta: #{@pr}"
 	end
+	
+	def addr (respuesta)
+		@re.push(respuesta)
+	end
+
 end
 

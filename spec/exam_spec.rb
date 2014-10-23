@@ -17,7 +17,8 @@ describe Exam do
 		end
 
 		it 'Deben existir opciones de respuesta(introducir respuesta)' do
-			expect(@p1.addr("Si.")).to be true
+			@p1.addr("Si.")
+			expect(@p1.re).not_to be_empty
 		end
 			
 	end
