@@ -15,5 +15,12 @@ class Pregunta
 		@re.push(respuesta)
 	end
 
+	def resp
+		respuestas = ""
+		for i in (0..(@re.length - 1))
+			respuestas += "#{i+1}) #{@re[i]}\n"
+		end
+		respuestas
+	end
 end
 
