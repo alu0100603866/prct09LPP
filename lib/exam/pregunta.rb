@@ -22,5 +22,9 @@ class Pregunta
 		end
 		respuestas
 	end
+
+	def to_s
+		preg + "\n\n" + resp
+	end
 end
 

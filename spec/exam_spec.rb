@@ -27,7 +27,7 @@ describe Exam do
 		end
 	
 		it 'Se debe mostrar por consola la pregunta y las opciones de respuesta' do
-			expext(@p1.to_s).to eq("Pregunta: ¿Pregunta?\n\n1) Si.\n2) No.\n")
+			expect(@p1.to_s).to eq("Pregunta: ¿Pregunta?\n\n1) Si.\n2) No.\n")
 		end
 	end
 
