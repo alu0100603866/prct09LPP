@@ -37,7 +37,27 @@ describe Exam do
 		end	
 	end
 
+	describe 'Prueba relacion de preguntas' do
+		it 'Apartado 2' do
+			p2 = Pregunta.new("La siguiente definicion de un hash en ruby es valida:\nhash_raro = {\n[1,2,3] => Object.new(),\nHash.new => :toto")
 
+			p2.addr("Cierto")
+			p2.addr("Falso")
+
+			expect(p2.to_s).to eq("Pregunta: La siguiente definicion de un hash en ruby es valida:\nhash_raro = {\n[1,2,3] => Object.new(),\nHash.new => :toto\n\n1) Cierto\n2) Falso\n")
+		end
+
+		it 'Apartado 4' do
+			p2 = Pregunta.new("¿Cual es el tipo de objeto en el siguiente codigo Ruby?\nclass Objeto\nend")
+			p2.addr("Una instancia de la clase Class")
+			p2.addr("Una constante")
+			p2.addr("Un objeto")
+			p2.addr("Ninguna de las anteriores")
+			expect(p2.to_s).to eq("Pregunta: ¿Cual es el tipo de objeto en el siguiente codigo Ruby?\nclass Objeto\nend\n\n1) Una instancia de la clase Class\n2) Una constante\n3) Un objeto\n4) Ninguna de las anteriores\n")
+		end
+	end
 end
+
+
 
 
