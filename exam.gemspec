@@ -8,8 +8,10 @@ Gem::Specification.new do |spec|
   spec.version       = Exam::VERSION
   spec.authors       = ["alu0100775846"]
   spec.email         = ["alu0100775846@ull.edu.es"]
-  spec.summary       = %q{TODO: Write a short summary. Required.}
-  spec.description   = %q{TODO: Write a longer description. Optional.}
+  spec.summary       = %q{TODO: Preguntas simples + lista enlazada.}
+  spec.description   = %q{TODO: En esta gema, se trabaja sobre un
+	  		programa para trabajar la creacion de examenes
+	  		y una lista enlazada..}
   spec.homepage      = ""
   spec.license       = "MIT"
 
@@ -20,4 +22,5 @@ Gem::Specification.new do |spec|
 
   spec.add_development_dependency "bundler", "~> 1.7"
   spec.add_development_dependency "rake", "~> 10.0"
+  spec.add_development_dependency "rspec", "~> 2.11"
 end
