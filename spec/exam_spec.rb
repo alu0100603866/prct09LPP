@@ -15,6 +15,11 @@ describe Exam do
 		it 'Debe existir un metodo para obtener la pregunta' do
 			expect(@p1.preg).to eq("Pregunta: ¿Pregunta?")
 		end
+
+		it 'Deben existir opciones de respuesta(introducir respuesta)' do
+			expect(@p1.addr("Si.")).to be true
+		end
+			
 	end
 
 end
