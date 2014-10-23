@@ -20,8 +20,18 @@ describe Exam do
 			@p1.addr("Si.")
 			expect(@p1.re).not_to be_empty
 		end
-			
+	
+		it 'Se debe invocar a un metodo para obtener las opciones de respuesta' do
+			@p1.addr("No.")
+			expect(@p1.resp).to eq("1) Si.\n2) No.\n")
 	end
+	
+	end
+
+	describe 'Lista enlazada' do
+	
+	end
+
 
 end
 
