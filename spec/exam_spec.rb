@@ -24,8 +24,11 @@ describe Exam do
 		it 'Se debe invocar a un metodo para obtener las opciones de respuesta' do
 			@p1.addr("No.")
 			expect(@p1.resp).to eq("1) Si.\n2) No.\n")
-	end
+		end
 	
+		it 'Se debe mostrar por consola la pregunta y las opciones de respuesta' do
+			expext(@p1.to_s).to eq("Pregunta: ¿Pregunta?\n\n1) Si.\n2) No.\n")
+		end
 	end
 
 	describe 'Lista enlazada' do
