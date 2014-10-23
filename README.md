@@ -1,31 +1,34 @@
-# Exam
+#Practica 6 Linked List
 
-TODO: Write a gem description
+Práctica de Laboratorio 6.
 
-## Installation
+Desarrollo dirigido por pruebas.
+	Clase lista enlazada con nodos.
 
-Add this line to your application's Gemfile:
+Ejemplos de definicion de espectativas son las siguientes:
+	
+Exam
 
-```ruby
-gem 'exam'
-```
+* Debe existir una pregunta
+* Se debe invocar a un metodo para obtener la pregunta
+* Deben existir opciones de respuesta
+* Se debe invocar a un metodo para obtener las opciones de respuesta
+* Se deben mostrar por la consola formateada la pregunta y las opciones de respuesta
 
-And then execute:
 
-    $ bundle
+Exam
 
-Or install it yourself as:
+Node
+* Debe existir un Nodo de la lista con sus datos y su siguiente
 
-    $ gem install exam
+List
+* Se extrae el primer elemento de la lista
+* Se puede insertar un elemento
+* Se pueden insertar varios elementos
+* Debe existir una Lista con su cabeza
 
-## Usage
+Realizado por:
 
-TODO: Write usage instructions here
+* Juan Tareq Gonzalez de Chavez Perez
 
-## Contributing
-
-1. Fork it ( https://github.com/[my-github-username]/exam/fork )
-2. Create your feature branch (`git checkout -b my-new-feature`)
-3. Commit your changes (`git commit -am 'Add some feature'`)
-4. Push to the branch (`git push origin my-new-feature`)
-5. Create a new Pull Request
+* Jose Manuel Hernandez Hernandez
