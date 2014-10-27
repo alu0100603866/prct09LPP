@@ -40,22 +40,22 @@ describe Exam do
 		
 		it 'Debe ser posible insertar nodos en la lista.' do
 			@lista.addn(@n1)
-			expect(@lista.get_first).to eq(@n1)
+			expect(@lista.first).to eq(@n1)
 		end
 		
 		it 'Se pueden insertar varios elementos.' do
 			@lista.addn(@n1)
 			@lista.addn(@n2)
-			expect(@lista.get_first).to eq(@n2)
+			expect(@lista.first).to eq(@n2)
 			@lista.deln
-			expect(@lista.get_first).to eq(@n1)
+			expect(@lista.first).to eq(@n1)
 		end
 
 		it 'Se extrae el primer elemento de la lista.' do
 			@lista.addn(@n1)
 			@lista.addn(@n2)
 			@lista.deln
-			expect(@lista.get_first).to eq(@n1)
+			expect(@lista.first).to eq(@n1)
 		end
 		
 	end
