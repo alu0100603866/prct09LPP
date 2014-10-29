@@ -4,7 +4,7 @@ require 'spec_helper'
 
 describe Exam do
 	before :all do
-		@p1 = Pregunta.new("¿Pregunta?")
+		@p1 = PreguntaS.new("¿Pregunta?")
 	end
 
 	describe 'Seleccion simple' do
@@ -32,25 +32,47 @@ describe Exam do
 	end
 
 
-	describe 'Prueba relacion de preguntas' do
-		it 'Apartado 2' do
-			p2 = Pregunta.new("La siguiente definicion de un hash en ruby es valida:\nhash_raro = {\n[1,2,3] => Object.new(),\nHash.new => :toto")
-
-			p2.addr("Cierto")
-			p2.addr("Falso")
-
-			expect(p2.to_s).to eq("Pregunta: La siguiente definicion de un hash en ruby es valida:\nhash_raro = {\n[1,2,3] => Object.new(),\nHash.new => :toto\n\n1) Cierto\n2) Falso\n")
-		end
-
-		it 'Apartado 4' do
-			p2 = Pregunta.new("¿Cual es el tipo de objeto en el siguiente codigo Ruby?\nclass Objeto\nend")
-			p2.addr("Una instancia de la clase Class")
-			p2.addr("Una constante")
-			p2.addr("Un objeto")
-			p2.addr("Ninguna de las anteriores")
-			expect(p2.to_s).to eq("Pregunta: ¿Cual es el tipo de objeto en el siguiente codigo Ruby?\nclass Objeto\nend\n\n1) Una instancia de la clase Class\n2) Una constante\n3) Un objeto\n4) Ninguna de las anteriores\n")
-		end
-	end
+it 'Prueba relacion de preguntas' do
+    
+    @p1 = PreguntaS.new("Cual es la salida del siguiente codigo Ruby?")
+    @p1.addr("<#Xyz:0xa000208>")
+    @p1.addr("nil")
+    @p1.addr("0")
+    @p1.addr("Ninguna de las anteriores")
+    
+    @p2 = PreguntaS.new("La siguiente definicion de un hash en ruby es valida:\nhash_raro = {\n[1,2,3] => Object.new(),\nHash.new => :toto")
+    @p2.addr("Cierto")
+    @p2.addr("Falso")
+    
+    @p3 = PreguntaS.new("Cual es la salida del siguiente codigo Ruby?")
+    @p3.addr("1")
+    @p3.addr("bob")
+    @p3.addr("HEY")
+    @p3.addr("Ninguna de las anteriores")
+    
+    @p4 = PreguntaS.new("Cual es el tipo de objeto en el siguiente codigo Ruby?\nclass Objeto\nend")
+    @p4.addr("Una instancia de la clase Class")
+    @p4.addr("Una constante")
+    @p4.addr("Un objeto")
+    @p4.addr("Ninguna de las anteriores")
+    
+    @p5 = PreguntaS.new("Es apropiado que una clase Tablero herede de una clase Juego")
+    @p5.addr("Verdadero")
+    @p5.addr("Falso")
+    
+    @n1 = Nodo.new(@p1)
+    @n2 = Nodo.new(@p2)
+    @n3 = Nodo.new(@p3)
+    @n4 = Nodo.new(@p4)
+    @n5 = Nodo.new(@p5)
+    
+    @lista = Lista.new()
+    @lista.addn(@n1)
+    @lista.addn(@n2)
+    @lista.addn(@n3)
+    @lista.addn(@n4)
+    @lista.addn(@n5)
+    end
 end
 
 

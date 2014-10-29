@@ -1,4 +1,5 @@
 require "exam/version"
+require 'exam/preguntaMadre'
 require 'exam/pregunta'
 require 'exam/lista'
 
