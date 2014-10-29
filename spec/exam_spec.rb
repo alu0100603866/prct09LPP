@@ -77,30 +77,44 @@ end
 
 
 describe Exam do
-    before :each do
-        @lista = Lista.new()
-        @n1 = Nodo.new("Nodo 1")
-        @n2 = Nodo.new("Nodo 2")
-    end
+    describe 'Lista' do
+
+        before :each do
+            @lista = Lista.new()
+            @n1 = Nodo.new("Nodo 1")
+            @n2 = Nodo.new("Nodo 2")
+            @n3 = Nodo.new("Nodo 3")
+        end
     
-    it 'Debe ser posible insertar nodos en la lista.' do
-        @lista.addn(@n1)
-        expect(@lista.head).to eq(@n1)
-    end
+        it 'Debe ser posible insertar nodos en la lista.' do
+            @lista.addn(@n1)
+            expect(@lista.head).to eq(@n1)
+        end
     
-    it 'Se pueden insertar varios elementos.' do
-        @lista.addn(@n1)
-        @lista.addn(@n2)
-        expect(@lista.head).to eq(@n2)
-        @lista.deln
-        expect(@lista.head).to eq(@n1)
-    end
+        it 'Se pueden insertar varios elementos.' do
+            @lista.addn(@n1)
+            @lista.addn(@n2)
+            expect(@lista.head).to eq(@n2)
+            @lista.deln
+            expect(@lista.head).to eq(@n1)
+        end
     
-    it 'Se extrae el primer elemento de la lista.' do
-        @lista.addn(@n1)
-        @lista.addn(@n2)
-        @lista.deln
-        expect(@lista.head).to eq(@n1)
-    end
+        it 'Se extrae el primer elemento de la lista.' do
+            @lista.addn(@n1)
+            @lista.addn(@n2)
+            @lista.deln
+            expect(@lista.head).to eq(@n1)
+        end
+        
+        it 'Cada nodo apunta a su siguiente y su anterior' do
+            @lista.addn(@n1)
+            @lista.addn(@n2)
+            @lista.addn(@n3)
+            expect(@lista.head).to eq(@n3)
+            expect(@lista.head.next).to eq(@n2)
+            expect(@lista.head.previus).to eq(@n1)
+        end
     
+    end
 end
+    

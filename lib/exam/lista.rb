@@ -1,6 +1,6 @@
 require 'pry'
 
-Nodo = Struct.new(:value, :next)
+Nodo = Struct.new(:value, :next, :previus)
 
 class Lista
     
