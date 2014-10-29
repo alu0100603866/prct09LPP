@@ -2,10 +2,11 @@
 
 Práctica de Laboratorio 6.
 
-Desarrollo dirigido por pruebas.
-	Clase lista enlazada con nodos.
+Desarrollo dirigido por pruebas (Test Driven Development, TDD).
 
-Ejemplos de definicion de expectativas son las siguientes:
+Clase lista enlazada con nodos.
+
+Ejemplos de definiciones de expectativas son las siguientes:
 	
 Exam
 
