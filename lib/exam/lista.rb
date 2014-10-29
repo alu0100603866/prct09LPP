@@ -14,7 +14,9 @@ class Lista
         end
 
         def deln	#elimina el nodo cabeza !pop
+            aux = @head
             @head = @head.next
+            aux.value
         end
         
         def head
