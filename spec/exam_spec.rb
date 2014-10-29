@@ -33,7 +33,6 @@ describe Exam do
 
 	describe 'Lista enlazada' do
 		before :all do
-<<<<<<< HEAD
 			@lista = Lista
 		end	
 	end
@@ -60,34 +59,31 @@ describe Exam do
 end
 
 
-
-
-=======
-			@lista = Lista.new()
-			@n1 = Nodo.new("Nodo 1")
-                        @n2 = Nodo.new("Nodo 2")
-		end
-		
-		it 'Debe ser posible insertar nodos en la lista.' do
-			@lista.addn(@n1)
-			expect(@lista.first).to eq(@n1)
-		end
-		
-		it 'Se pueden insertar varios elementos.' do
-			@lista.addn(@n1)
-			@lista.addn(@n2)
-			expect(@lista.first).to eq(@n2)
-			@lista.deln
-			expect(@lista.first).to eq(@n1)
-		end
-
-		it 'Se extrae el primer elemento de la lista.' do
-			@lista.addn(@n1)
-			@lista.addn(@n2)
-			@lista.deln
-			expect(@lista.first).to eq(@n1)
-		end
-		
-	end
+describe Exam do
+    before :each do
+        @lista = Lista.new()
+        @n1 = Nodo.new("Nodo 1")
+        @n2 = Nodo.new("Nodo 2")
+    end
+    
+    it 'Debe ser posible insertar nodos en la lista.' do
+        @lista.addn(@n1)
+        expect(@lista.first).to eq(@n1)
+    end
+    
+    it 'Se pueden insertar varios elementos.' do
+        @lista.addn(@n1)
+        @lista.addn(@n2)
+        expect(@lista.first).to eq(@n1)
+        @lista.deln
+        expect(@lista.first).to eq(@n2)
+    end
+    
+    it 'Se extrae el primer elemento de la lista.' do
+        @lista.addn(@n1)
+        @lista.addn(@n2)
+        @lista.deln
+        expect(@lista.first).to eq(@n2)
+    end
+    
 end
->>>>>>> origin/jose

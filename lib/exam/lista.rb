@@ -22,7 +22,5 @@ class Lista
                 @arr.first
         end
 
-binding.pry
-
 end
 
