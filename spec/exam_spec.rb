@@ -113,6 +113,38 @@ describe Exam do
             expect(@lista.head).to eq(@n3)
             expect(@lista.head.next).to eq(@n2)
             expect(@lista.head.previus).to eq(@n1)
+            extra = Nodo.new("EXTRA")
+            @lista.addn(extra)
+            expect(@lista.head.previus).to eq(@n1)
+            expect(@lista.head).to eq(extra)
+            expect(@lista.tail).to eq(@n1)
+
+        end
+        
+        it 'Cada nodo apunta a su siguiente, desde head' do
+            @lista.addn(@n1)
+            @lista.addn(@n2)
+            @lista.addn(@n3)
+            extra = Nodo.new("EXTRA")
+            @lista.addn(extra)
+            
+            expect(@lista.head).to eq(extra)
+            expect(@lista.head.next).to eq(@n3)
+            expect(@lista.head.next.next).to eq(@n2)
+            expect(@lista.head.next.next.next).to eq(@n1)
+            
+        end
+        
+        it 'Cada nodo apunta a su anterior, desde tail' do
+            @lista.addn(@n1)
+            @lista.addn(@n2)
+            @lista.addn(@n3)
+            extra = Nodo.new("EXTRA")
+            @lista.addn(extra)
+            expect(@lista.tail.previus.previus.previus).to eq(extra)
+            expect(@lista.tail.previus.previus).to eq(@n3)
+            expect(@lista.tail.previus).to eq(@n2)
+            expect(@lista.tail).to eq(@n1)
         end
     
     end
