@@ -3,23 +3,22 @@ require 'pry'
 Nodo = Struct.new(:value, :next)
 
 class Lista
+    
         def initialize
-                @arr = []
                 @head = nil
         end
 
-        def addn(nodo)  #coloca un nuevo nodo como cabeza
+        def addn(nodo)  #coloca un nuevo nodo como cabeza !push
                 nodo.next = @head
-                @head = nodo.object_id
-                @arr << nodo
+                @head = nodo
         end
 
-        def deln	#elimina el nodo cabeza
-        	@arr.shift
+        def deln	#elimina el nodo cabeza !pop
+            @head = @head.next
         end
-
-        def first 	#devuelve el nodo cabeza
-                @arr.first
+        
+        def head
+            @head
         end
 
 end
