@@ -132,7 +132,6 @@ describe Exam do
             expect(@lista.head.next).to eq(@n3)
             expect(@lista.head.next.next).to eq(@n2)
             expect(@lista.head.next.next.next).to eq(@n1)
-            
         end
         
         it 'Cada nodo apunta a su anterior, desde tail' do

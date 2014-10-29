@@ -14,14 +14,19 @@ class Lista
 
             if (!@head.nil? && @head.next.nil?)
                 @tail = @head
+                @tail.next = nil
             end
             
             if (!head.nil?)
                 @head.previus = nodo
             end
 
-            nodo.previus = @tail
+            nodo.previus = nil
+            #si en vez de nil ponemos tail, es una lsita circular, es decir unimos head con tail en previus
+            
             @head = nodo
+           
+            #@tail.next = @head añadir esto para que la lista sea circular tail apuntara a head como siguiente
         end
 
         def deln	#elimina el nodo cabeza !pop
