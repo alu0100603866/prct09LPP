@@ -1,30 +1,18 @@
-#Practica 6 Linked List
+#Practica 7 Herencia
 
-Práctica de Laboratorio 6.
+Práctica de Laboratorio 7.
 
 Desarrollo dirigido por pruebas (Test Driven Development, TDD).
 
-Clase lista enlazada con nodos.
+Crear una jerarquía de clases Ruby, de manera que se puedan representar preguntas: 
 
-Ejemplos de definiciones de expectativas son las siguientes:
-	
-Exam
+* Selección Simple
+* Verdadero y Falso.
 
-* Debe existir una pregunta.
-* Se debe invocar a un metodo para obtener la pregunta.
-* Deben existir opciones de respuesta.
-* Se debe invocar a un metodo para obtener las opciones de respuesta.
-* Se deben mostrar por la consola formateada la pregunta y las opciones de respuesta.
+Agregar funcionalidad a la clase listas enlazadas para que puedan
+leerse en ambos sentidos, es decir convertirla en una lista doblemente
+enlazada
 
-
-Node
-* Debe existir un Nodo de la lista con sus datos y su siguiente
-
-List
-* Se extrae el primer elemento de la lista.
-* Se puede insertar un elemento.
-* Se pueden insertar varios elementos.
-* Debe existir una Lista con su cabeza.
 
 Realizado por:
 
