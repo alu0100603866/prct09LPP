@@ -148,4 +148,9 @@ describe Exam do
     
     end
 end
-    
+
+it 'Prueba de pregunta VF' do
+	@pregunta = PreguntaVF.new("Esto es una pregunta?")
+	expect(@lista.to_s).to eq("Esto es una pregunta?\nVerdadero\nFalso")
+end
+		   
