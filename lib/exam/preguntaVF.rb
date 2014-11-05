@@ -1,12 +1,12 @@
 
-class PreguntaVF
-	def initialize(pregunta, correcta = :V)
-		super
+class PreguntaVF < Pregunta
+	def initialize(pregunta, correcta)
+		super(pregunta)
 		@correcta = correcta
 	end
 	def to_s
 		string = ''
-		string += @preg.to_s
+		string += @pr
 		string += "\nVerdadero"
 		string += "\nFalso"
 	end

@@ -144,11 +144,12 @@ describe Exam do
             expect(@lista.tail).to eq(@n1)
         end
     
+        it 'Prueba de pregunta VF' do
+            @pregunta = PreguntaVF.new("Esto es una pregunta?", "Verdadero")
+            expect(@pregunta.to_s).to eq("Esto es una pregunta?\nVerdadero\nFalso")
+        end
     end
 end
 
-it 'Prueba de pregunta VF' do
-	@pregunta = PreguntaVF.new("Esto es una pregunta?")
-	expect(@lista.to_s).to eq("Esto es una pregunta?\nVerdadero\nFalso")
-end
+
 		   
