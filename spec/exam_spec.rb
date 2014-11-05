@@ -112,10 +112,8 @@ describe Exam do
             @lista.addn(@n3)
             expect(@lista.head).to eq(@n3)
             expect(@lista.head.next).to eq(@n2)
-            expect(@lista.head.previus).to eq(@n1)
             extra = Nodo.new("EXTRA")
             @lista.addn(extra)
-            expect(@lista.head.previus).to eq(@n1)
             expect(@lista.head).to eq(extra)
             expect(@lista.tail).to eq(@n1)
 
