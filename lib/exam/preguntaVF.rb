@@ -1,4 +1,4 @@
-
+# -*- coding: utf-8 -*-
 class PreguntaVF < Pregunta
 	def initialize(pregunta, correcta)
 		super(pregunta)

@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 require "exam/version"
 require 'exam/preguntaMadre'
 require 'exam/pregunta'

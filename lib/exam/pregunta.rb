@@ -1,4 +1,4 @@
-
+# -*- coding: utf-8 -*-
 class PreguntaS < Pregunta
 
 	attr_reader :re

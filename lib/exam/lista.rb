@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 require 'pry'
 
 Nodo = Struct.new(:value, :next, :previus)
