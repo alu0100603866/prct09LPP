@@ -5,7 +5,7 @@ require 'spec_helper'
 
 describe Exam do
 	before :all do
-		@p1 = PreguntaS.new("¿Pregunta?")
+		@p1 = PreguntaS.new("¿Pregunta?", 5)
         @p1.addr("Si.")
         @p1.addr("No.")
 	end
@@ -37,29 +37,29 @@ describe Exam do
 
     it 'Prueba relacion de preguntas' do
     
-        @p1 = PreguntaS.new("Cual es la salida del siguiente codigo Ruby?")
+        @p1 = PreguntaS.new("Cual es la salida del siguiente codigo Ruby?", 5)
         @p1.addr("<#Xyz:0xa000208>")
         @p1.addr("nil")
         @p1.addr("0")
         @p1.addr("Ninguna de las anteriores")
     
-        @p2 = PreguntaS.new("La siguiente definicion de un hash en ruby es valida:\nhash_raro = {\n[1,2,3] => Object.new(),\nHash.new => :toto")
+        @p2 = PreguntaS.new("La siguiente definicion de un hash en ruby es valida:\nhash_raro = {\n[1,2,3] => Object.new(),\nHash.new => :toto", 5)
         @p2.addr("Cierto")
         @p2.addr("Falso")
     
-        @p3 = PreguntaS.new("Cual es la salida del siguiente codigo Ruby?")
+        @p3 = PreguntaS.new("Cual es la salida del siguiente codigo Ruby?", 5)
         @p3.addr("1")
         @p3.addr("bob")
         @p3.addr("HEY")
         @p3.addr("Ninguna de las anteriores")
     
-        @p4 = PreguntaS.new("Cual es el tipo de objeto en el siguiente codigo Ruby?\nclass Objeto\nend")
+        @p4 = PreguntaS.new("Cual es el tipo de objeto en el siguiente codigo Ruby?\nclass Objeto\nend", 5)
         @p4.addr("Una instancia de la clase Class")
         @p4.addr("Una constante")
         @p4.addr("Un objeto")
         @p4.addr("Ninguna de las anteriores")
     
-        @p5 = PreguntaS.new("Es apropiado que una clase Tablero herede de una clase Juego")
+        @p5 = PreguntaS.new("Es apropiado que una clase Tablero herede de una clase Juego", 5)
         @p5.addr("Verdadero")
         @p5.addr("Falso")
     
@@ -148,7 +148,7 @@ describe Exam do
         end
     
         it 'Prueba de pregunta VF' do
-            @pregunta = PreguntaVF.new("Esto es una pregunta?", "Verdadero")
+            @pregunta = PreguntaVF.new("Esto es una pregunta?", 5, "Verdadero")
             expect(@pregunta.to_s).to eq("Esto es una pregunta?\nVerdadero\nFalso")
         end
     end

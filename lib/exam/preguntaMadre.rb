@@ -1,9 +1,10 @@
 # -*- coding: utf-8 -*-
 class Pregunta
-	attr_reader :pr
+    attr_reader :pr, :df
 
-	def initialize(pregunta)
+	def initialize(pregunta, dificultad)
 		@pr = pregunta
+        @df = dificultad
 	end
 
 end
