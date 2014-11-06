@@ -1,17 +1,16 @@
-#Practica 7 Herencia
+#Practica 8 Programación orientada a objetos, Modulos
 
-Práctica de Laboratorio 7.
+Práctica de Laboratorio 8.
 
 Desarrollo dirigido por pruebas (Test Driven Development, TDD).
 
-Crear una jerarquía de clases Ruby, de manera que se puedan representar preguntas: 
+Jerarquía de clases Ruby para representar preguntas de examen:
 
-* Selección Simple
-* Verdadero y Falso.
+*Agregar modulo comparable
 
-Agregar funcionalidad a la clase listas enlazadas para que puedan
-leerse en ambos sentidos, es decir convertirla en una lista doblemente
-enlazada
+Clase para gestionar listas enlazadas:
+
+*Agregar modulo enumerable
 
 
 Realizado por:
