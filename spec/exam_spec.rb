@@ -155,10 +155,10 @@ describe Exam do
     
     describe 'Exam practica 8: ' do
         before :each do
-            @D5 = PreguntaS("Dificultad5", 5)
-            @D5_2 = PreguntaS("Dificultad5", 5)
+            @D5 = PreguntaS.new("Dificultad5", 5)
+            @D5_2 = PreguntaS.new("Dificultad5", 5)
 
-            @D2 = PreguntaS("Dificultad2", 2)
+            @D2 = PreguntaS.new("Dificultad2", 2)
         end
 
         describe 'Comparable: ' do

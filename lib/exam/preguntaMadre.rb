@@ -7,6 +7,11 @@ class Pregunta
 		@pr = pregunta
         @df = dificultad
 	end
+    
+    def <=> (other)
+        @df <=> other.df
+    end
+    
 
 end
 
