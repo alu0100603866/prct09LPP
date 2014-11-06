@@ -152,6 +152,33 @@ describe Exam do
             expect(@pregunta.to_s).to eq("Esto es una pregunta?\nVerdadero\nFalso")
         end
     end
+    
+    describe 'Exam practica 8: ' do
+        before :each do
+            @D5 = PreguntaS("Dificultad5", 5)
+            @D5_2 = PreguntaS("Dificultad5", 5)
+
+            @D2 = PreguntaS("Dificultad2", 2)
+        end
+
+        describe 'Enumerable: ' do
+                it "Pregunta D5 debe ser mayor que pregunta D2" do
+                        expect(@D5 > @D2).to eq(true)
+                end
+                
+                it "Pregunta D2 debe ser menor que pregunta D5" do
+                    expect(@D2 < @D5).to eq(true)
+                end
+                
+                it "Pregunta D5 debe ser igual que pregunta D5_2" do
+                    expect(@D5 == @D5_2).to eq(true)
+                end
+        end
+        
+        describe 'Comparable: ' do
+            
+        end
+    end
 end
 
 
