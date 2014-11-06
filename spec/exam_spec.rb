@@ -5,6 +5,8 @@ require 'spec_helper'
 describe Exam do
 	before :all do
 		@p1 = PreguntaS.new("¿Pregunta?")
+        @p1.addr("Si.")
+        @p1.addr("No.")
 	end
 
 	describe 'Seleccion simple' do
@@ -17,12 +19,12 @@ describe Exam do
 		end
 
 		it 'Deben existir opciones de respuesta(introducir respuesta).' do
-			@p1.addr("Si.")
+			
 			expect(@p1.re).not_to be_empty
 		end
 	
 		it 'Se debe invocar a un metodo para obtener las opciones de respuesta.' do
-			@p1.addr("No.")
+			
 			expect(@p1.resp).to eq("1) Si.\n2) No.\n")
 		end
 	
