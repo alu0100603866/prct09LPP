@@ -161,7 +161,7 @@ describe Exam do
             @D2 = PreguntaS("Dificultad2", 2)
         end
 
-        describe 'Enumerable: ' do
+        describe 'Comparable: ' do
                 it "Pregunta D5 debe ser mayor que pregunta D2" do
                         expect(@D5 > @D2).to eq(true)
                 end
@@ -175,7 +175,7 @@ describe Exam do
                 end
         end
         
-        describe 'Comparable: ' do
+        describe 'Enumerable: ' do
             
         end
     end
