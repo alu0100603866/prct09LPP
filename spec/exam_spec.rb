@@ -128,7 +128,6 @@ describe Exam do
             @lista.addn(@n3)
             extra = Nodo.new("EXTRA")
             @lista.addn(extra)
-            
             expect(@lista.head).to eq(extra)
             expect(@lista.head.next).to eq(@n3)
             expect(@lista.head.next.next).to eq(@n2)
