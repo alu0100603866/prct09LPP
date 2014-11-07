@@ -176,10 +176,11 @@ describe Exam do
         
         describe 'Enumerable: ' do
             before :each do
-                @preg = Preg.new()
-                @preg.addr("respuesta1")
-                @preg.addr("respuesta2")
-                expect(@preg.each do |p| puts p end).to eq("respuesta1\nrespuesta2\n")
+                @lista = Lista.new()
+                @n1 = Nodo.new("Nodo 1")
+                @n2 = Nodo.new("Nodo 2")
+                @n3 = Nodo.new("Nodo 3")
+                expect(@lista.each do |l| puts l end).to eq("Nodo 1\nNodo 2\nNodo 3")
             end
         end
     end

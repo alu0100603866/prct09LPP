@@ -11,7 +11,6 @@ class Pregunta
     def <=> (other)
         @df <=> other.df
     end
-    
 
 end
 
