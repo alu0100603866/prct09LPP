@@ -175,7 +175,12 @@ describe Exam do
         end
         
         describe 'Enumerable: ' do
-            
+            before :each do
+                @preg = Preg.new()
+                @preg.addr("respuesta1")
+                @preg.addr("respuesta2")
+                expect(@preg.each do |p| puts p end).to eq("respuesta1\nrespuesta2\n")
+            end
         end
     end
 end
