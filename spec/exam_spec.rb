@@ -173,7 +173,7 @@ describe Exam do
                     expect(@D5 == @D5_2).to eq(true)
                 end
         end
-        
+=begin
         describe 'Enumerable: ' do
             before :each do
                 @lista = Lista.new()
@@ -185,6 +185,4 @@ describe Exam do
         end
     end
 end
-
-
-		   
+=end

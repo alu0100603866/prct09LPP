@@ -1,5 +1,4 @@
 # -*- coding: utf-8 -*-
-require 'pry'
 
 class Nodo
 	attr_reader :id, :valor
@@ -10,5 +9,3 @@ class Nodo
 		@next = nil
 	end
 end
-
-binding.pry

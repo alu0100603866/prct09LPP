@@ -13,4 +13,3 @@ class Pregunta
     end
 
 end
-
