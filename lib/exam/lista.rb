@@ -48,5 +48,14 @@ class Lista
         def tail
             @tail
         end
+        
+        def each(&block)
+            current_node = @head
+            
+            while current_node != nil
+                block.call(current_node)
+                current_node = current_node.next
+            end
+        end
 end
 
