@@ -178,23 +178,23 @@ describe Exam do
             
             before :all do
 
-            @p1 = PreguntaS.new("Cual es la salida del siguiente codigo Ruby?", 5)
+            @p1 = PreguntaS.new("Cual es la salida del siguiente codigo Ruby?", 3)
             @p1.addr("<#Xyz:0xa000208>")
             @p1.addr("nil")
             @p1.addr("0")
             @p1.addr("Ninguna de las anteriores")
         
-            @p2 = PreguntaS.new("La siguiente definicion de un hash en ruby es valida:\nhash_raro = {\n[1,2,3] => Object.new(),\nHash.new => :toto", 5)
+            @p2 = PreguntaS.new("ZLa siguiente definicion de un hash en ruby es valida:\nhash_raro = {\n[1,2,3] => Object.new(),\nHash.new => :toto", 2)
             @p2.addr("Cierto")
             @p2.addr("Falso")
     
-            @p3 = PreguntaS.new("Cual es la salida del siguiente codigo Ruby?", 5)
+            @p3 = PreguntaS.new("Cual es la salida del siguiente codigo Ruby?", 4)
             @p3.addr("1")
             @p3.addr("bob")
             @p3.addr("HEY")
             @p3.addr("Ninguna de las anteriores")
     
-            @p4 = PreguntaS.new("Cual es el tipo de objeto en el siguiente codigo Ruby?\nclass Objeto\nend", 5)
+            @p4 = PreguntaS.new("Cual es el tipo de objeto en el siguiente codigo Ruby?\nclass Objeto\nend", 9)
             @p4.addr("Una instancia de la clase Class")
             @p4.addr("Una constante")
             @p4.addr("Un objeto")
