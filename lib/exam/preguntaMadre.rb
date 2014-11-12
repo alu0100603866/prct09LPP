@@ -12,4 +12,8 @@ class Pregunta
         @df <=> other.df
     end
 
+    def == (other)
+        @pr == other.pr && @df == other.df
+    end
+
 end

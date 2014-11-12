@@ -172,38 +172,79 @@ describe Exam do
                 it "Pregunta D5 debe ser igual que pregunta D5_2" do
                     expect(@D5 == @D5_2).to eq(true)
                 end
+                
         end
         describe 'Enumerable: ' do
             
             before :all do
-                @lista = Lista.new()
-                @n1 = Nodo.new("Nodo 1")
-                @n2 = Nodo.new("Nodo 2")
-                @n3 = Nodo.new("Nodo 3")
-                @lista.addn(@n1)
-                @lista.addn(@n2)
-                @lista.addn(@n3)
+
+            @p1 = PreguntaS.new("Cual es la salida del siguiente codigo Ruby?", 5)
+            @p1.addr("<#Xyz:0xa000208>")
+            @p1.addr("nil")
+            @p1.addr("0")
+            @p1.addr("Ninguna de las anteriores")
+        
+            @p2 = PreguntaS.new("La siguiente definicion de un hash en ruby es valida:\nhash_raro = {\n[1,2,3] => Object.new(),\nHash.new => :toto", 5)
+            @p2.addr("Cierto")
+            @p2.addr("Falso")
+    
+            @p3 = PreguntaS.new("Cual es la salida del siguiente codigo Ruby?", 5)
+            @p3.addr("1")
+            @p3.addr("bob")
+            @p3.addr("HEY")
+            @p3.addr("Ninguna de las anteriores")
+    
+            @p4 = PreguntaS.new("Cual es el tipo de objeto en el siguiente codigo Ruby?\nclass Objeto\nend", 5)
+            @p4.addr("Una instancia de la clase Class")
+            @p4.addr("Una constante")
+            @p4.addr("Un objeto")
+            @p4.addr("Ninguna de las anteriores")
+    
+            @p5 = PreguntaS.new("Es apropiado que una clase Tablero herede de una clase Juego", 5)
+            @p5.addr("Verdadero")
+            @p5.addr("Falso")
+    
+            @n1 = Nodo.new(@p1)
+            @n2 = Nodo.new(@p2)
+            @n3 = Nodo.new(@p3)
+            @n4 = Nodo.new(@p4)
+            @n5 = Nodo.new(@p5)
+    
+            @lista = Lista.new()
+            @lista.addn(@n1)
+            @lista.addn(@n2)
+            @lista.addn(@n3)
+            @lista.addn(@n4)
+            @lista.addn(@n5)
             end
             
             it "La lista es enumerable" do
                 string = ""
                 @lista.each do |l| 
-                    string << l.value
+                    string << "test"
                     string << "\n" 
                 end
-                expect(string).to eq("Nodo 3\nNodo 2\nNodo 1\n")
+                expect(string).to eq("test\n"*5)
             end
             
             it "Cuenta los elementos de la lista" do
-                expect(@lista.count).to eq(3)
+                expect(@lista.count).to eq(5)
             end
             
             it "Drop" do
-                expect(@lista.drop(3)).to eq([])
+                expect(@lista.drop(5)).to eq([])
             end
             
             it "Find index" do
-                expect(@lista.find_index {|i| i.value == 'Nodo 3'}).to eq(0)
+                expect(@lista.find_index {|i| i.value == @n3.value}).to eq(2)
+            end
+            
+            it "Maximo" do
+                expect(@lista.max).to eq(@n4)
+            end
+            
+            it "Minimo" do
+                expect(@lista.min).to eq(@n2)
             end
         end
     end

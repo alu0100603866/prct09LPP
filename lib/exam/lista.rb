@@ -2,6 +2,13 @@
 
 Nodo = Struct.new(:value, :next, :previus)
 
+class Nodo
+    include Comparable
+    def <=> (other)
+        value <=> other.value
+    end
+end
+
 class Lista
         include Enumerable
         def initialize
