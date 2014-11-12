@@ -179,7 +179,9 @@ describe Exam do
                 @n1 = Nodo.new("Nodo 1")
                 @n2 = Nodo.new("Nodo 2")
                 @n3 = Nodo.new("Nodo 3")
-                expect(@lista.each do |l| puts l end).to eq("Nodo 1\nNodo 2\nNodo 3")
+                string = ""
+                @lista.each do |l| string << l end
+                expect(string).to eq("Nodo 1\nNodo 2\nNodo 3")
             end
         end
     end
