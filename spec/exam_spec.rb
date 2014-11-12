@@ -174,14 +174,28 @@ describe Exam do
                 end
         end
         describe 'Enumerable: ' do
-            before :each do
+            
+            before :all do
                 @lista = Lista.new()
                 @n1 = Nodo.new("Nodo 1")
                 @n2 = Nodo.new("Nodo 2")
                 @n3 = Nodo.new("Nodo 3")
+                @lista.addn(@n1)
+                @lista.addn(@n2)
+                @lista.addn(@n3)
+            end
+            
+            it "La lista es enumerable" do
                 string = ""
-                @lista.each do |l| string << l end
-                expect(string).to eq("Nodo 1\nNodo 2\nNodo 3")
+                @lista.each do |l| 
+                    string << l.value
+                    string << "\n" 
+                end
+                expect(string).to eq("Nodo 3\nNodo 2\nNodo 1\n")
+            end
+            
+            it "Cuenta los elementos de la lista" do
+                expect(@lista.count).to eq(3)
             end
         end
     end

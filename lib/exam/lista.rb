@@ -3,13 +3,21 @@
 Nodo = Struct.new(:value, :next, :previus)
 
 class Lista
-    
+        include Enumerable
         def initialize
                 @head = nil
                 @tail = nil
         end
 
-        def addn(nodo)  #coloca un nuevo nodo como cabeza !push
+        def addn(nodo2)  #coloca un nuevo nodo como cabeza !push
+            nodo = Nodo.new()
+            
+            if (nodo2.class == Nodo)
+                    nodo = nodo2
+            else
+                nodo.valor = nodo2
+            end
+            
             nodo.next = @head
 
             if (!@head.nil? && @head.next.nil?)
