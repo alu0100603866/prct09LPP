@@ -197,6 +197,14 @@ describe Exam do
             it "Cuenta los elementos de la lista" do
                 expect(@lista.count).to eq(3)
             end
+            
+            it "Drop" do
+                expect(@lista.drop(3)).to eq([])
+            end
+            
+            it "Find index" do
+                expect(@lista.find_index {|i| i.value == 'Nodo 3'}).to eq(0)
+            end
         end
     end
 end
