@@ -5,7 +5,11 @@ Nodo = Struct.new(:value, :next, :previus)
 class Nodo
     include Comparable
     def <=> (other)
-        value <=> other.value
+        if (other.value.instance_of? Pregunta)
+            value.df <=> other.value.df
+        else
+            value <=> other.value
+        end
     end
 end
 
@@ -22,7 +26,7 @@ class Lista
             if (nodo2.class == Nodo)
                     nodo = nodo2
             else
-                nodo.valor = nodo2
+                nodo.value = nodo2
             end
             
             nodo.next = @head
@@ -71,6 +75,16 @@ class Lista
                 block.call(current_node)
                 current_node = current_node.next
             end
+        end
+        
+        def ordenar()
+           contador = self.count-1
+           aux = self.sort
+           @head = nil
+           while (!aux[contador].nil?) do
+                self.addn(aux[contador])
+                contador = contador-1
+           end
         end
 end
 
