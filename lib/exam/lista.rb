@@ -22,7 +22,7 @@ class Lista
             if (nodo2.class == Nodo)
                     nodo = nodo2
             else
-                nodo.valor = nodo2
+                nodo.value = nodo2
             end
             
             nodo.next = @head
@@ -71,6 +71,16 @@ class Lista
                 block.call(current_node)
                 current_node = current_node.next
             end
+        end
+        
+        def ordenar()
+           contador = self.count-1
+           aux = self.sort
+           @head = nil
+           while (!aux[contador].nil?) do
+                self.addn(aux[contador])
+                contador = contador-1
+           end
         end
 end
 

@@ -199,10 +199,8 @@ describe Exam do
             @p4.addr("Un objeto")
             @p4.addr("Ninguna de las anteriores")
     
-            @p5 = PreguntaS.new("Es apropiado que una clase Tablero herede de una clase Juego", 5)
-            @p5.addr("Verdadero")
-            @p5.addr("Falso")
-    
+            @p5 = PreguntaVF.new("Es apropiado que una clase Tablero herede de una clase Juego", 5)
+        
             @n1 = Nodo.new(@p1)
             @n2 = Nodo.new(@p2)
             @n3 = Nodo.new(@p3)
@@ -245,6 +243,61 @@ describe Exam do
             it "Minimo" do
                 expect(@lista.min).to eq(@n2)
             end
+            
+        end
+    end
+    
+    describe 'Exam Practica9' do
+        before :all do
+            @p1 = PreguntaS.new("Cuanto es 7*3?", 3)
+            @p1.addr("16")
+            @p1.addr("21")
+            @p1.addr("33")
+            @p1.addr("15")
+            
+            @p2 = PreguntaVF.new("¿La siguiente definicion de un hash en ruby es valida?:\nhash_raro = {\n[1,2,3] => Object.new(),\nHash.new => :toto", 2)
+            
+            @p3 = PreguntaS.new("Cual es la salida del siguiente codigo Ruby?", 4)
+            @p3.addr("1")
+            @p3.addr("bob")
+            @p3.addr("HEY")
+            @p3.addr("Ninguna de las anteriores")
+            
+            @p4 = PreguntaS.new("Cual es el tipo de objeto en el siguiente codigo Ruby?\nclass Objeto\nend", 9)
+            @p4.addr("Una instancia de la clase Class")
+            @p4.addr("Una constante")
+            @p4.addr("Un objeto")
+            @p4.addr("Ninguna de las anteriores")
+            
+            @p5 = PreguntaVF.new("Es apropiado que una clase Tablero herede de una clase Juego", 1)
+            
+            @n1 = Nodo.new(@p1)
+            @n2 = Nodo.new(@p2)
+            @n3 = Nodo.new(@p3)
+            @n4 = Nodo.new(@p4)
+            @n5 = Nodo.new(@p5)
+            
+            @lista = Lista.new()
+            @lista.addn(@n1)
+            @lista.addn(@n2)
+            @lista.addn(@n3)
+            @lista.addn(@n4)
+            @lista.addn(@n5)
+        end
+
+        it "¿Se puede ordenar una lista?" do
+            @lista.ordenar
+            expect(@lista.head).to eq(@n5)
+            expect(@lista.head.next).to eq(@n2)
+            expect(@lista.head.next.next).to eq(@n1)
+            expect(@lista.head.next.next.next).to eq(@n3)
+            expect(@lista.tail).to eq(@n4)
+        end
+        
+        it "Clase examen, muestra las preguntas en orden" do
+            exam = Examen.new(@lista)
+            expect(exam.to_s).to eq(@p5.to_s+"\n"+@p2.to_s+"\n"+@p1.to_s+"\n"+@p3.to_s+"\n"+@p4.to_s+"\n")
+            
         end
     end
 end
