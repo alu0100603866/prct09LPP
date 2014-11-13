@@ -294,5 +294,11 @@ describe Exam do
             expect(@lista.head.next.next.next).to eq(@n3)
             expect(@lista.tail).to eq(@n4)
         end
+        
+        it "Clase examen, muestra las preguntas en orden" do
+            exam = Exam.new(@lista)
+            expect(exam.to_s).to eq(@p5.to_s+"\n"+@p2.to_s"\n"+@p1.to_s"\n"+@p3.to_s"\n"+@p4.to_s)
+            
+        end
     end
 end

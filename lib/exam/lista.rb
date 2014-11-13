@@ -5,11 +5,7 @@ Nodo = Struct.new(:value, :next, :previus)
 class Nodo
     include Comparable
     def <=> (other)
-        if (other.value.instance_of? Pregunta)
-            value.df <=> other.value.df
-        else
-            value <=> other.value
-        end
+        value <=> other.value
     end
 end
 
