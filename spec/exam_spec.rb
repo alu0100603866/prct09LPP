@@ -1,6 +1,5 @@
 # -*- coding: utf-8 -*-
 require "exam"
-
 require 'spec_helper'
 
 describe Exam do
