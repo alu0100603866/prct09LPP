@@ -299,6 +299,12 @@
         1,
         null,
         null,
+        1,
+        1,
+        0,
+        null,
+        null,
+        null,
         null
       ],
       "/Users/juantareq/Desktop/PracticasLPP/prct09LPP/lib/exam.rb": [
@@ -390,9 +396,7 @@
         1,
         1,
         1,
-        null,
         53,
-        null,
         null,
         null,
         null,
@@ -473,6 +477,6 @@
         null
       ]
     },
-    "timestamp": 1415895440
+    "timestamp": 1415903955
   }
 }
