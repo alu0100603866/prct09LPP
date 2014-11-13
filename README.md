@@ -1,16 +1,16 @@
-#Practica 8 Programación orientada a objetos, Modulos
+#Practica 9 Programación Orientada a Objetos. Singletons.
 
-Práctica de Laboratorio 8.
+Práctica de Laboratorio 9.
 
 Desarrollo dirigido por pruebas (Test Driven Development, TDD).
 
-Jerarquía de clases Ruby para representar preguntas de examen:
+Trabajo:
 
-*Agregar modulo comparable
+* Crear Clase examen, que represente un examen 
 
-Clase para gestionar listas enlazadas:
+* Mostrar las preguntas ordenadas
 
-*Agregar modulo enumerable
+* Hacer que cada pregunta tenga una respuesta correcta
 
 
 Realizado por:
