@@ -8,6 +8,7 @@ class Examen
 		#inicializamos un array con 0 elementos para las respuestas
 	end
 
+
 	def to_s
         aux = @preguntas.head
         respuesta = ""
