@@ -3,6 +3,7 @@
 class Examen
 	attr_reader :nota
 	def initialize (lista)
+        lista.ordenar
 		@preguntas = lista
         @nota = 0
 		#inicializamos un array con 0 elementos para las respuestas
