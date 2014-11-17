@@ -27,5 +27,21 @@ class PreguntaS < Pregunta
 	def to_s
 		preg + "\n\n" + resp
 	end
+
+	def resp_correcta?(resp)
+		if resp.to_i != 0
+			resp.to_i!		#sera numero, lo pasamos a int.
+		else
+			resp.downcase!	#sera String, admitimos mayus y minus.
+		end
+		
+		if resp == @correcta
+			puts "Respuesta correcta"
+			true
+		else
+			puts "Respuesta incorrecta"
+			false
+		end
+	end
 end
 

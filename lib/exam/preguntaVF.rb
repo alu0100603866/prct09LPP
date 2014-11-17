@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 class PreguntaVF < Pregunta
-	def initialize(pregunta, dificultad, correcta = true)
+	def initialize(pregunta, dificultad, correcta = "v")
 		super(pregunta, dificultad)
 		@correcta = correcta
 	end

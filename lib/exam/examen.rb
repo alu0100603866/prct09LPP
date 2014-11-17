@@ -22,5 +22,12 @@ class Examen
         end
         respuesta
 	end
+	
+	def hacer_examen
+        @preguntas.each do |preg|
+            puts preg.to_s
+            resp = gets.chomp
+            preg.resp_correcta?(resp)
+        end
+	end
 end
-
