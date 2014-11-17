@@ -254,22 +254,27 @@ describe Exam do
             @p1.addr("21")
             @p1.addr("33")
             @p1.addr("15")
+            @p1.correcta = 2
             
             @p2 = PreguntaVF.new("¿La siguiente definicion de un hash en ruby es valida?:\nhash_raro = {\n[1,2,3] => Object.new(),\nHash.new => :toto", 2)
+            @p2.correcta = 'F'
             
-            @p3 = PreguntaS.new("Cual es la salida del siguiente codigo Ruby?", 4)
+            @p3 = PreguntaS.new("Cual es la salida del siguiente codigo Ruby? puts 'bob'", 4)
             @p3.addr("1")
             @p3.addr("bob")
             @p3.addr("HEY")
             @p3.addr("Ninguna de las anteriores")
+            @p3.correcta = 1
             
             @p4 = PreguntaS.new("Cual es el tipo de objeto en el siguiente codigo Ruby?\nclass Objeto\nend", 9)
             @p4.addr("Una instancia de la clase Class")
             @p4.addr("Una constante")
             @p4.addr("Un objeto")
             @p4.addr("Ninguna de las anteriores")
+            @p4.correcta = 3
             
-            @p5 = PreguntaVF.new("Es apropiado que una clase Tablero herede de una clase Juego", 1)
+            @p5 = PreguntaVF.new("Es apropiado que una clase Tablero herede de una clase Juego", 10)
+            @p5.correcta = nil
             
             @n1 = Nodo.new(@p1)
             @n2 = Nodo.new(@p2)
@@ -298,6 +303,17 @@ describe Exam do
             exam = Examen.new(@lista)
             expect(exam.to_s).to eq(@p5.to_s+"\n"+@p2.to_s+"\n"+@p1.to_s+"\n"+@p3.to_s+"\n"+@p4.to_s+"\n")
             
+        end
+        
+        it "Existe y se puede modificar la respuesta correcta" do
+            expect(@p1.resp_correcta?(2)).to eq(true)
+            expect(@p1.resp_correcta?(3)).to eq(false)
+            @p1.correcta = 3
+            expect(@p1.resp_correcta?(2)).to eq(false)
+            expect(@p1.resp_correcta?(3)).to eq(true)
+        end
+        
+        it "Pruebas con " do
         end
     end
 end

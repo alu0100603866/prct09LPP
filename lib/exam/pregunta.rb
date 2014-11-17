@@ -32,7 +32,7 @@ class PreguntaS < Pregunta
 		if resp.to_i != 0
 			resp.to_i!		#sera numero, lo pasamos a int.
 		else
-			resp.downcase!	#sera String, admitimos mayus y minus.
+			resp.upcase!	#sera String, admitimos mayus y minus.
 		end
 		
 		if resp == @correcta
@@ -43,5 +43,5 @@ class PreguntaS < Pregunta
 			false
 		end
 	end
+	
 end
-
