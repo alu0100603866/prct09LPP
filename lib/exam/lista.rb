@@ -74,13 +74,16 @@ class Lista
         end
         
         def ordenar()
-           contador = self.count-1
+           contador = (self.count)
+           contador = contador-1
            aux = self.sort
            @head = nil
-           while (!aux[contador].nil?) do
+           @tail = aux[0]
+           while (contador >= 0) do
                 self.addn(aux[contador])
                 contador = contador-1
            end
+           
         end
 end
 
