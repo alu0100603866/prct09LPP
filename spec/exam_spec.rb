@@ -246,7 +246,7 @@ describe Exam do
             
         end
     end
-    
+
     describe 'Exam Practica9' do
         before :all do
             @p1 = PreguntaS.new("Cuanto es 7*3?", 3)
@@ -289,7 +289,7 @@ describe Exam do
             @lista.addn(@n4)
             @lista.addn(@n5)
         end
-
+=begin
         it "¿Se puede ordenar una lista?" do
             @lista.ordenar
             expect(@lista.head).to eq(@n5)
@@ -315,5 +315,6 @@ describe Exam do
         
         it "Pruebas con " do
         end
+=end
     end
 end
