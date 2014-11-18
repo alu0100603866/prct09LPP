@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+require 'pry'
 
 Nodo = Struct.new(:value, :next, :previus)
 
@@ -85,5 +86,22 @@ class Lista
            end
            
         end
+        
+        def to_s    #pàra testear
+            self.each do |l|
+                print l.value.to_s + " -> "
+            end
+            puts ""
+        end
 end
 
+=begin
+l = Lista.new 
+l.addn(3)
+l.addn(1)
+l.addn(7)
+l.to_s
+l.ordenar()
+l.to_s
+binding.pry
+=end

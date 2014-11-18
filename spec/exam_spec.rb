@@ -273,7 +273,7 @@ describe Exam do
             @p4.addr("Ninguna de las anteriores")
             @p4.correcta = 3
             
-            @p5 = PreguntaVF.new("Es apropiado que una clase Tablero herede de una clase Juego", 10)
+            @p5 = PreguntaVF.new("Es apropiado que una clase Tablero herede de una clase Juego", 1)
             @p5.correcta = nil
             
             @n1 = Nodo.new(@p1)
@@ -289,7 +289,7 @@ describe Exam do
             @lista.addn(@n4)
             @lista.addn(@n5)
         end
-=begin
+
         it "¿Se puede ordenar una lista?" do
             @lista.ordenar
             expect(@lista.head).to eq(@n5)
@@ -298,7 +298,7 @@ describe Exam do
             expect(@lista.head.next.next.next).to eq(@n3)
             expect(@lista.tail).to eq(@n4)
         end
-        
+      
         it "Clase examen, muestra las preguntas en orden" do
             exam = Examen.new(@lista)
             expect(exam.to_s).to eq(@p5.to_s+"\n"+@p2.to_s+"\n"+@p1.to_s+"\n"+@p3.to_s+"\n"+@p4.to_s+"\n")
@@ -306,15 +306,12 @@ describe Exam do
         end
         
         it "Existe y se puede modificar la respuesta correcta" do
-            expect(@p1.resp_correcta?(2)).to eq(true)
-            expect(@p1.resp_correcta?(3)).to eq(false)
+            expect(@p1.resp_correcta?("2")).to eq(true)
+            expect(@p1.resp_correcta?("3")).to eq(false)
             @p1.correcta = 3
-            expect(@p1.resp_correcta?(2)).to eq(false)
-            expect(@p1.resp_correcta?(3)).to eq(true)
+            expect(@p1.resp_correcta?("2")).to eq(false)
+            expect(@p1.resp_correcta?("3")).to eq(true)
         end
         
-        it "Pruebas con " do
-        end
-=end
     end
 end
