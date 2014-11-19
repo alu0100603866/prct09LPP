@@ -274,7 +274,7 @@ describe Exam do
             @p4.correcta = 3
             
             @p5 = PreguntaVF.new("Es apropiado que una clase Tablero herede de una clase Juego", 1)
-            @p5.correcta = nil
+            @p5.correcta = 'V'
             
             @n1 = Nodo.new(@p1)
             @n2 = Nodo.new(@p2)
@@ -313,5 +313,10 @@ describe Exam do
             expect(@p1.resp_correcta?("3")).to eq(true)
         end
         
+        it "Probando hacer_examen" do
+            examen = Examen.new(@lista)
+            resps = ['v','f','2','1','3']
+            expect(examen.hacer_examen(resps)).to eq(5)
+        end
     end
 end

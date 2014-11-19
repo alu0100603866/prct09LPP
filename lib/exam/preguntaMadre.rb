@@ -26,10 +26,10 @@ class Pregunta
 		end
 		
 		if resp == @correcta
-            puts "Respuesta correcta"
+            #puts "Respuesta correcta"
 			true
 		else
-            puts "Respuesta incorrecta"
+            #puts "Respuesta incorrecta"
 			false
 		end
 	end

@@ -28,11 +28,28 @@ class Examen
         @preguntas.each do |preg|
             puts preg.to_s
             resp = gets.chomp
-            this = preg.resp_correcta?(resp)
+            this = preg.value.resp_correcta?(resp)
             if (this == true)
                 score += 1 
+                puts "Respuesta correcta"
+            else
+                puts "Respuesta incorrecta"
             end
         end
         puts "Puntuacion: " + score
 	end
+	
+    def hacer_examen(respuestas)
+	    score = 0
+	    contador = 0
+	    @preguntas.each do |preg|
+	        resp = respuestas[contador]
+            this = preg.value.resp_correcta?(resp)
+            if (this == true)
+                score += 1 
+            end
+	        contador += 1
+	   end
+	   return score
+    end
 end
